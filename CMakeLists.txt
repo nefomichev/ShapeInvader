@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 set(PROJECT_NAME ShapeInvader)
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp
+        src/Vec2.h
+        src/Vec2.cpp)
 
 project(${PROJECT_NAME} VERSION 0.1)
 

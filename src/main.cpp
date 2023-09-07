@@ -1,7 +1,10 @@
+#include "Vec2.h"
 #include "iostream"
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    Vec2 vector (1, 3);
+    vector.print();
+    std::cout << vector.length() << std::endl;
     return 0;
 }
