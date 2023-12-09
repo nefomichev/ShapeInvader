@@ -12,24 +12,21 @@ public:
     double y = 0.0;
 
     Vec2();
-    Vec2(float xin, float yin);
+    Vec2(double xin, double yin);
 
     bool operator == (const Vec2& rhs) const;
     bool operator != (const Vec2& rhs) const;
-
-    Vec2 operator + (const Vec2& rhs) const;
-    Vec2 operator - (const Vec2& rhs) const;
-    Vec2 operator * (const float val) const;
-    Vec2 operator / (const float val) const;
-
-    void operator += (const Vec2& rhs) const;
-    void operator -= (const Vec2& rhs) const;
-    void operator *= (const float val) const;
-    void operator /= (const float val) const;
-
-    float dist(const Vec2& rhs) const;
-    void normalize() const;
-    double length() const;
+    [[nodiscard]] Vec2 operator + (const Vec2& rhs) const;
+    [[nodiscard]] Vec2 operator - (const Vec2& rhs) const;
+    [[nodiscard]] Vec2 operator * (double val) const;
+    [[nodiscard]] Vec2 operator / (double val) const;
+    void operator += (const Vec2& rhs);
+    void operator -= (const Vec2& rhs);
+    void operator *= (double val);
+    void operator /= (double val);
+    [[nodiscard]] double dist(const Vec2& rhs) const;
+    [[nodiscard]] Vec2 normalize() const;
+    [[nodiscard]] double length() const;
     void print() const;
 
 
